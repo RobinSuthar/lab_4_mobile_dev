@@ -3,11 +3,11 @@ import { StyleSheet, View, TextInput, Button } from "react-native";
 import { useState } from "react";
 
 function ToDoForm({ addTask }) {
-  const [task, setTask] = useState(""); // Local state for input field
+  const [task, setTask] = useState("");
 
   const handleAddTask = () => {
-    addTask(task); // Call the passed-down function
-    setTask(""); // Clear the input field after adding the task
+    addTask(task);
+    setTask("");
   };
 
   return (
@@ -15,8 +15,8 @@ function ToDoForm({ addTask }) {
       <TextInput
         style={styles.input}
         placeholder="Add a new task..."
-        value={task} // Controlled input
-        onChangeText={setTask} // Update state as user types
+        value={task}
+        onChangeText={setTask}
       />
       <Button title="Add" onPress={handleAddTask} />
     </View>
